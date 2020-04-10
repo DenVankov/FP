@@ -6,9 +6,8 @@
         (format t "~%")))
 
 (defun matrix-tl-bl (n)
-    (PROG
-        ((i 0) (j 0) (value 1) (last (- n 1)))
-        (setf matrix (make-array (list n n)))
+    (let
+        ((i 0) (j 0) (value 1) (last (- n 1)) (matrix (make-array (list n n))))
         (loop for diag-length from 1 to n do
     		(if (oddp diag-length)
     			(let ((end (- diag-length 1)))
@@ -67,6 +66,6 @@
     			)
     		)
     	)
-    )
     matrix
+    )
 )
