@@ -49,7 +49,7 @@
     (when (= n 0)
         (setf result "ноль")
         result)
-        
+
     (loop while (> n 0)
     do
         (progn
@@ -73,22 +73,21 @@
             (setf result (concatenate 'string result (aref termination celoe cnt) " ")))
     ))
     (setf result (remove-extra-spaces result))
-    (format t "~a" result)
-
+    result
 ))
 
-; (number-sentence 3967)
+; (print (number-sentence 3967))
 ; (format t "~%")
-; (number-sentence 0)
+; (print (number-sentence 0))
 ; (format t "~%")
-; (number-sentence 1)
+; (print (number-sentence 1))
 ; (format t "~%")
-; (number-sentence 11)
+; (print (number-sentence 11))
 ; (format t "~%")
-; (number-sentence 15)
+; (print (number-sentence 15))
 ; (format t "~%")
-; (number-sentence 9367)
+; (print (number-sentence 9367))
 ; (format t "~%")
-; (number-sentence 3517)
+; (print (number-sentence 3517))
 ; (format t "~%")
-; (number-sentence 120004)
+; (print (number-sentence 120004))
