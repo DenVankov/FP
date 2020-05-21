@@ -28,13 +28,13 @@
            :2 (make-instance 'cart :x 7 :y 5)
            :3 (make-instance 'cart :x 5 :y -1)))
 
-(defun get-vector ((a cart) (b cart))
+(defmethod get-vector ((a cart) (b cart))
 	(make-instance 'cart :x (- (cart-x b) (cart-x a)) :y (- (cart-y b) (cart-y a))))
 
-(defun get-length ((a cart))
+(defmethod get-length ((a cart))
 	(sqrt (+ (* (cart-x a) (cart-x a)) (* (cart-y a) (cart-y a)) )))
 
-(defun sum-cart ((a cart) (b cart))
+(defmethod sum-cart ((a cart) (b cart))
 	(make-instance 'cart :x (+ (cart-x a) (cart-x b)) :y (+ (cart-y a) (cart-y b))))
 
 (defun биссектриса ((tri triangle))
@@ -58,6 +58,6 @@
 	))
 
 ; (setq tri (make-instance 'triangle
-;            :1 (make-instance 'cart :x 1 :y 0)
-;            :2 (make-instance 'cart :x 3 :y 0)
-;            :3 (make-instance 'cart :x 4 :y 0)))
+;            :1 (make-instance 'cart :x 4 :y 3)
+;            :2 (make-instance 'cart :x 7 :y 5)
+;            :3 (make-instance 'cart :x 5 :y -1)))
