@@ -37,7 +37,7 @@
 (defmethod sum-cart ((a cart) (b cart))
 	(make-instance 'cart :x (+ (cart-x a) (cart-x b)) :y (+ (cart-y a) (cart-y b))))
 
-(defun биссектриса ((tri triangle))
+(defmethod биссектриса ((tri triangle))
 	(let* ((AB (get-vector (vertex1 tri) (vertex2 tri)))
 	(BC (get-vector (vertex2 tri) (vertex3 tri)))
 	(AC (get-vector (vertex1 tri) (vertex3 tri)))
